@@ -1,0 +1,123 @@
+body {
+  overflow-x: hidden;
+}
+
+#header {
+  background-color: #3d437a;
+}
+
+#header a {
+  color: #f6f6f6;
+}
+
+nav button {
+  display: none;
+}
+
+.navbar-toggler {
+  border-style: none;
+}
+
+nav button:hover {
+  background-color: #2a2f5a;
+}
+
+/* Estiliza o container com a imagem de fundo */
+.bg-image {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupar a altura total da tela */
+  background-image: url("../images/bg.jpg"); /* Substitua pelo caminho da sua imagem */
+  background-size: cover; /* Faz a imagem cobrir o container */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetições da imagem */
+}
+
+/* Overlay escurecido */
+.bg-image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cor preta com transparência */
+  z-index: 1; /* Certifica que o overlay fica acima do background */
+}
+
+/* Estiliza o formulário */
+.form-content {
+  position: relative;
+  z-index: 2; /* Coloca o formulário acima do overlay */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Fundo branco semitransparente */
+  backdrop-filter: blur(5px); /* Efeito de desfoque no fundo do formulário */
+  border-radius: 10px;
+  color: white; /* Texto branco */
+}
+
+#especialidades h2.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+#especialidades p {
+  color: #6c757d;
+}
+
+#feedback-container h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+#feedback-container p {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
+#feedback-container .depoimento-single h3,
+#feedback-container .servico-single p {
+  font-weight: 600;
+}
+
+#footer {
+  background-color: #3d437a;
+  text-align: center;
+  color: white;
+}
+
+#footer a:hover {
+  color: #f8c146; /* Cor de destaque ao passar o mouse */
+  text-decoration: underline;
+}
+
+#footer h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Ajustes em dispositivos menores */
+@media (max-width: 576px) {
+  .form-content {
+    width: 100%; /* O formulário ocupa a largura total */
+  }
+}
+
+@media (max-width: 767px) {
+  nav button {
+    background-color: #3d437a;
+    color: #f6f6f6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block; /* Garante que o botão será exibido */
+  }
+}
