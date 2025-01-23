@@ -2,12 +2,13 @@ body {
   overflow-x: hidden;
 }
 
-#header {
-  background-color: #3d437a;
-}
-
 #header a {
   color: #f6f6f6;
+}
+
+#navBarResponsive a:hover {
+  color: #f8c146; /* Cor de destaque ao passar o mouse */
+  text-decoration: underline;
 }
 
 nav button {
@@ -16,10 +17,6 @@ nav button {
 
 .navbar-toggler {
   border-style: none;
-}
-
-nav button:hover {
-  background-color: #2a2f5a;
 }
 
 /* Estiliza o container com a imagem de fundo */
