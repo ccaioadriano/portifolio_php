@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse  justify-content-end" id="navBarResponsive">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="<?php ROOT_PATH ?>">Home</a>
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php ROOT_PATH ?>/sobre">Sobre</a>
@@ -53,23 +53,27 @@
     // Remove todas as barras (/) da string
     $page = str_replace("/", "", $page);
 
-    switch ($page) {
-        case 'sobre':
-            include 'pages/home.php';
-            break;
-        case 'contato':
-            include 'pages/contato.php';
-            break;
-        case 'servicos':
-            include 'pages/servicos.php';
-            break;
-        default:
-            include 'pages/home.php';
-            break;
+    if (file_exists("pages/$page.php")) {
+        switch ($page) {
+            case 'sobre':
+                include 'pages/sobre.php';
+                break;
+            case 'contato':
+                include 'pages/contato.php';
+                break;
+            case 'servicos':
+                include 'pages/servicos.php';
+                break;
+            default:
+                include 'pages/home.php';
+                break;
+        }
+    } else {
+        include 'pages/404.php';
     }
     ?>
 
-    <footer id="footer" class="bg-dark text-light py-4">
+    <footer id="footer" class="bg-dark text-light py-4 <?php if(!file_exists("pages/$page.php")) echo 'fixed'?>">
         <div class="container">
             <div class="row">
                 <!-- Sobre -->

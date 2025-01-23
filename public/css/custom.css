@@ -86,6 +86,7 @@ nav button {
   background-color: #3d437a;
   text-align: center;
   color: white;
+  width: 100%;
 }
 
 #footer a:hover {
@@ -96,6 +97,11 @@ nav button {
 #footer h5 {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
 }
 
 /* Ajustes em dispositivos menores */
